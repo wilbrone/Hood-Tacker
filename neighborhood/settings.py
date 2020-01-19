@@ -36,7 +36,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'projects.apps.ProjectsConfig',
+    'hood.apps.HoodConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -94,7 +94,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'awards.wsgi.application'
+WSGI_APPLICATION = 'neighborhood.wsgi.application'
 
 
 # Database
@@ -181,6 +181,3 @@ LOGOUT_REDIRECT_URL = 'login'
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
 
-
-# ##########################################################
-# ROOT_URLCONF = ''
