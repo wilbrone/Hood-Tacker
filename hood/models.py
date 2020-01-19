@@ -7,6 +7,8 @@ class Neighborhood(models.Model):
     name=models.CharField(max_length=60)
     location=models.CharField(max_length=60)
     population=models.IntegerField()
+    health_number = models.CharField(max_length=20)
+    police_number = models.CharField(max_length=20)
     image = models.ImageField(upload_to = 'images/')
 
     def create_neighborhood(self):
