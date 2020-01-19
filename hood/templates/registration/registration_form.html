@@ -7,11 +7,8 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-title mt-4">
-                    <img src="{% static 'images/insta5.png' %}" alt="" width="40%" class="D-block mx-auto">
-                </div>
                 <div class="card-body mb-3 mr-3 ml-3">
-                    <p class="text-center">Sign up to see photos and videos from your friends.
+                    <p class="text-center">Sign up to see the different and various estates.
                     </p>
                     <form action="" method="post" novalidate>
                         {% csrf_token%}
@@ -25,19 +22,6 @@
             <div class="card mt-2">
                 <div class="card-body mt-3 mb-2 mr-3 ml-3">
                     <p>Have an account? <a href="{% url 'login' %}">Log in</a></p>
-                </div>
-            </div>
-            <div container>
-                <p class="text-center mt-4">Get the app</p>
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-5 mb-2">
-                        <img src="{% static 'images/insta2.png' %}" alt="" width="100%" class="download">
-                    </div>
-                    <div class="col-md-5 mb-2">
-                        <img src="{% static 'images/insta1.png' %}" alt="" width="100%" class="download">
-                    </div>
-                    <div class="col-md-1"></div>
                 </div>
             </div>
         </div>

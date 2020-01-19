@@ -31,8 +31,8 @@ def signup(request):
 
 @login_required(login_url='login')
 def index(request):
-    param = "welcome"
-    return render(request, 'all-pics/index.html',{'param':param})
+    hoods = Neighborhood.objects.all()
+    return render(request, 'all-dtls/index.html',{'hoods':hoods})
 
 
 @login_required(login_url='login')
@@ -54,4 +54,4 @@ def profile(request, username):
         'images': images,
 
     }
-    return render(request, 'all-pics/profile.html', params)
+    return render(request, 'all-dtls/profile.html', params)
