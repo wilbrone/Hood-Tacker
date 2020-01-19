@@ -51,12 +51,12 @@ def profile(request):
             return render(request,'all-dtls/profile.html',{"form": form})
     else:
         u_form = UpdateUserForm(instance=request.user)
-        # p_form = ProfileUpdateForm(instance=request.user.profile)
+        p_form = UpdateUserProfileForm(instance=request.user.profile)
 
 
     context = {
         'u_form':u_form,
-        # 'p_form':p_form
+        'p_form':p_form
     }
 
     return render(request, 'all-dtls/profile.html',locals())
