@@ -19,7 +19,7 @@
           <h4><i>{{ neighborhood.name }}</i></h4>
           <p class='article-content'>location: {{ neighborhood.location }}</p>
           <p class='article-content'>population: {{ neighborhood.population }}</p>
-          <p class="article-content">Posted By: {{ neighborhood.user.username }}</p>
+          <p class="article-content">posted by: {{ neighborhood.user.user | title }}</p>
         </header>
         <br>
         <div class="w3-container">
@@ -27,7 +27,7 @@
         </div>
         <footer class="w3-container container">
           <br>
-          <a href="" style="text-decoration:none;"><button class="btn btn-outline-success center-block">Join</button></a>
+          <a href="{% url 'details' neighborhood.id %}" style="text-decoration:none;"><button class="btn btn-outline-success center-block">Join</button></a>
           <br>
         </footer>
       </div>

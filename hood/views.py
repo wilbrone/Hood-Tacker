@@ -74,3 +74,26 @@ def search_hoods(request):
         message="You haven't searched for any term"
 
         return render(request, 'all-dtls/search.html',{"message":message})
+
+
+@login_required(login_url='login')
+def addNeighborhood(request):
+    neighborform = NeighborhoodForm()
+    neighborform.owner = request.user
+    if request.method == "POST":
+        neighborform = NeighborhoodForm(request.POST,request.FILES)
+        if neighborform.is_valid():
+           neighborform.save()
+           return render (request,'all-dtls/index.html')
+        else:
+           neighborform=NeighborhoodForm(request.POST,request.FILES)
+
+    return render(request,'all-dtls/neighborhood_form.html',{"neighborform":neighborform})
+
+
+@login_required(login_url='login')
+def neighborhood_details(request,neighborhood_id):
+    businesses=Business.objects.filter(neighborhood=neighborhood_id)
+    posts=Post.objects.filter(neighborhood=neighborhood_id)
+    neighborhood=Neighborhood.objects.get(pk=neighborhood_id)
+    return render(request,'all-dtls/details.html',{'neighborhood':neighborhood,'businesses':businesses,'posts':posts})

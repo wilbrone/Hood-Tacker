@@ -10,5 +10,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('profile/', views.profile, name='profile'),
     path('search/', views.search_hoods, name='search'),
-
+    path('addneighborhood',views.addNeighborhood,name="addNeighborhood"),
+    path('details/(?P<neighborhood_id>\d+)/$' , views.neighborhood_details, name='details' ),
 ]
