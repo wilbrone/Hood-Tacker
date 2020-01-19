@@ -12,6 +12,8 @@ class Neighborhood(models.Model):
     health_number = models.CharField(max_length=20)
     police_number = models.CharField(max_length=20)
     image = models.ImageField(upload_to = 'images/')
+    user = models.ForeignKey("Profile", on_delete=models.CASCADE)
+
 
     def create_neighborhood(self):
         self.save()
