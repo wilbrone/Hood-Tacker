@@ -5,7 +5,7 @@
 {%block content%}
 <div class="container">
     <div class="row">
-        <div style="margin-top:20px;" class='col-md-5'>
+        <div style="margin-top:20px;" class='col-md-4'>
             <div style="width:100%;" class="w3-container card">
 
                 <div class="w3-card" style="width:100%; margin-top:2em;">
@@ -33,11 +33,13 @@
 
 
 
-        <div style="background-color:#E5E7E9; margin-top:20px; margin-right:2px; margin-left:2px;" class="col-md-3">
+        <div style="overflow-y: scroll; background-color:#E5E7E9; margin-top:20px; margin-right:2px; margin-left:2px;" class="col-md-4">
           <br>
-            <p>click <a class="img-thumbnail" href="{%url 'new_business' pk=neighborhood.pk %}" style="text-decoration:none;">here</a> to post about your business</p>
-            {%if businesses%}
-            {%for business in businesses%}
+            <p>click 
+                <a class="img-thumbnail" href="{%url 'new_business' pk=neighborhood.pk %}" style="text-decoration:none;">here</a> 
+                to share your Business</p>
+            {% if businesses %}
+            {% for business in businesses %}
 
             <p><b>name:</b> {{business.name}}</p>
             <p><b>description:</b> {{business.description}}</p>
@@ -51,11 +53,11 @@
 
 
 
-        <div style="background-color:#E5E7E9; margin-top:20px; margin-right:2px; margin-left:2px;" class="col-md-3">
+        <div style="overflow-y: scroll; background-color:#E5E7E9; margin-top:20px; margin-right:2px; margin-left:2px;" class="col-md-3">
           <br>
             <p><a class="img-thumbnail" href="{%url 'new_post' pk=neighborhood.pk %}" style="text-decoration:none;">
                     share
-                </a> something with your neighbour. </p>
+                </a> something with your Neighbors. </p>
             {%if posts%}
             {%for post in posts%}
             <p><strong>{{post.user.username}}: </strong> {{post.post}}</p>
