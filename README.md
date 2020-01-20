@@ -19,7 +19,7 @@ User get to see th different hoods available and the ones they would like to joi
 To run locally clone the project to you pc `git clone https://github.com/wilbrone/Hood-Tacker.git`. Activate the virtual environment, Run `source env/bin/activate` and `python3.6 manage.py runserver` to serve the app locally.
 To install all the required dependencies, run `pip install -r requirements.txt` and start up the server 
 
-to access the deployed application on heroku
+https://hood101.herokuapp.com/ to access the deployed application on heroku
 
  
 ## Support, Further help and contact details
