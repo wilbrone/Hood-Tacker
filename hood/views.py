@@ -88,7 +88,7 @@ def addNeighborhood(request):
         else:
            neighborform=NeighborhoodForm(request.POST,request.FILES)
 
-    return render(request,'all-dtls/neighborhood_form.html',{"neighborform":neighborform})
+    return render(request,'all-dtls/hood_form.html',{"neighborform":neighborform})
 
 
 @login_required(login_url='login')

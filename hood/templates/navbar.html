@@ -56,17 +56,11 @@
             Home
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Add Hood</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
       </ul>
-        <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="{% url 'search' %}" >
-            <input name="search" autocomplete="off" id="searching" class="form-control d-none d-md-block" placeholder="Search Hoods">
-            <i class="spinner "></i>
-        </form> 
+      <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="{% url 'search' %}" >
+          <input name="search" autocomplete="off" id="searching" class="form-control d-none d-md-block" placeholder="Search Hoods">
+          <i class="spinner "></i>
+      </form> 
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item" style="color:white;">
           <h6>{{ user.username }}</h6>

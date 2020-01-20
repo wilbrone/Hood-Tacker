@@ -33,11 +33,14 @@
       </div>
       <br><br><br><br>
 
-
     </div>
     {%endfor%}
   </div>
-
+  <a href="{% url 'addNeighborhood' %}">
+    <button class="btn  btn-success" style="bottom:3%;right:3%;border-radius: 50%;border: none;padding: 20px;text-align: center;text-decoration: none;display: inline-block;margin: 4px 2px; position: fixed;">
+      <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+    </button>
+  </a>
 </div>
 
 {% endblock %}
