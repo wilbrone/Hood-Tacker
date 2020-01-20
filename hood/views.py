@@ -108,10 +108,10 @@ def new_business(request,pk):
         business_form = NewBusinessForm(request.POST, request.FILES)
         if business_form.is_valid():
             business = business_form.save(commit=False)
-            business.user = current_user.profile
+            business.user = current_user
             business.neighborhood=neighborhood
             business.save()
-        return redirect('all-dtls/details.html', neighborhood_id=neighborhood.id)
+        return redirect('details', id = neighborhood.id)
 
     else:
         business_form = NewBusinessForm()
@@ -129,7 +129,7 @@ def new_post(request,pk):
             post.user = current_user
             post.neighborhood=neighborhood
             post.save()
-        return redirect(request,'all-dtls/details.html', neighborhood_id=neighborhood.id)
+        return redirect('details',id = neighborhood.id)
 
     else:
         post_form = NewPostForm()

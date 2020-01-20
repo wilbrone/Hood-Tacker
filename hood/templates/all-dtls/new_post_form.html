@@ -11,10 +11,12 @@
 
 <body>
   {% block content %}
-  <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
+  <form action="{% url 'new_post' neighborhood.id %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {% bootstrap_form neighbourform %}
-    <a href="{% url 'home' %}"><button type="submit">Upload</button></a>
+    {% for field in form %}
+        {% bootstrap_field field %}
+    {% endfor %}
+    <button type="submit">Upload</button>
   </form>
   {% endblock %}
 </body>
