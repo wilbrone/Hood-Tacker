@@ -33,9 +33,9 @@
 
 
 
-        {% comment %} <div style="background-color:#E5E7E9; margin-top:20px; margin-right:2px; margin-left:2px;" class="col-md-3">
+        <div style="background-color:#E5E7E9; margin-top:20px; margin-right:2px; margin-left:2px;" class="col-md-3">
           <br>
-            <p>click <a class="img-thumbnail" href="{%url 'new_business' pk=neighbourhood.id %}" style="text-decoration:none;">here</a> to post about your business</p>
+            <p>click <a class="img-thumbnail" href="{%url 'new_business' pk=neighborhood.pk %}" style="text-decoration:none;">here</a> to post about your business</p>
             {%if businesses%}
             {%for business in businesses%}
 
@@ -47,13 +47,13 @@
             {%else%}
             <p><b>no business at the moment</b></p>
             {%endif%}
-        </div> {% endcomment %}
+        </div>
 
 
 
-        {% comment %} <div style="background-color:#E5E7E9; margin-top:20px; margin-right:2px; margin-left:2px;" class="col-md-3">
+        <div style="background-color:#E5E7E9; margin-top:20px; margin-right:2px; margin-left:2px;" class="col-md-3">
           <br>
-            <p><a class="img-thumbnail" href="{%url 'new_post' pk=neighbourhood.id %}" style="text-decoration:none;">
+            <p><a class="img-thumbnail" href="{%url 'new_post' pk=neighborhood.pk %}" style="text-decoration:none;">
                     share
                 </a> something with your neighbour. </p>
             {%if posts%}
@@ -64,7 +64,7 @@
             <p><b>no post by {{user.username}} at the moment</b></p>
             {%endif%}
             <br>
-        </div> {% endcomment %}
+        </div>
     </div>
 </div>
 
