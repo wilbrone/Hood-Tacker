@@ -92,8 +92,8 @@ def addNeighborhood(request):
 
 
 @login_required(login_url='login')
-def neighborhood_details(request,neighborhood_id):
-    businesses=Business.objects.filter(neighborhood=neighborhood_id)
-    posts=Post.objects.filter(neighborhood=neighborhood_id)
-    neighborhood=Neighborhood.objects.get(pk=neighborhood_id)
+def neighborhood_details(request,id):
+    businesses=Business.objects.filter(neighborhood = id)
+    posts=Post.objects.filter(neighborhood = id)
+    neighborhood=Neighborhood.objects.get(pk = id)
     return render(request,'all-dtls/details.html',{'neighborhood':neighborhood,'businesses':businesses,'posts':posts})

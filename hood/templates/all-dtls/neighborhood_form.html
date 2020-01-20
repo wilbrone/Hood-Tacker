@@ -1,6 +1,6 @@
-{%extends 'base.html'%}
-{%load bootstrap3%}
-{%load static%}
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  {%block content%}
+  {% block content %}
   <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {% bootstrap_form neighbourform %}
     <a href="{% url 'home' %}"><button type="submit">Upload</button></a>
   </form>
-  {%endblock%}
+  {% endblock %}
 </body>
 
 </html>
