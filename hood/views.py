@@ -79,14 +79,15 @@ def search_hoods(request):
 @login_required(login_url='login')
 def addNeighborhood(request):
     neighborform = NeighborhoodForm()
-    neighborform.owner = request.user
     if request.method == "POST":
         neighborform = NeighborhoodForm(request.POST,request.FILES)
         if neighborform.is_valid():
-           neighborform.save()
-           return render (request,'all-dtls/index.html')
+            post = neighborform.save(commit=False)
+            post.user = request.user.profile
+            post.save()
+            return redirect ('index')
         else:
-           neighborform=NeighborhoodForm(request.POST,request.FILES)
+            neighborform=NeighborhoodForm(request.POST,request.FILES)
 
     return render(request,'all-dtls/hood_form.html',{"neighborform":neighborform})
 

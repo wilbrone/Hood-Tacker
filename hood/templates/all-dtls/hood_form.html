@@ -16,7 +16,8 @@
     <form action="{% url 'addNeighborhood' %}" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {% bootstrap_form neighborform %}
-      <a href="{% url 'index' %}"><button type="submit">Publish</button></a>
+      <button type="submit">Publish</button>
+      {% comment %} <a href="{% url 'index' %}"><button type="submit">Publish</button></a> {% endcomment %}
     </form>
   </div>
   {% endblock %}
