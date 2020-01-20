@@ -29,9 +29,9 @@
                             <div class="w3-container content">
 
                                 <p class="container">location: {{hood.location}}</p>
-                                {% comment %} <a href="{%url 'detail' hood.id %}" style="color:blue; text-decoration:none"><b>More details</b></a> {% endcomment %}
+                                <a href="{%url 'details' hood.id %}" style="color:blue; text-decoration:none"><b>More details</b></a>
                                 <img src="{{ hood.image.url }}" alt="image" style="width:100%">
-                                <!-- <p>admin: {{hood.admin}}</p> -->
+                                <p>posted by: {{hood.user.user | title}}</p>
 
                             </div>
                         </div>
